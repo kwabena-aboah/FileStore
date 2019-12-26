@@ -1,0 +1,25 @@
+{% extends "pinax/documents/base.html" %}
+
+{% block body_class %}{{ block.super }} pinax-documents-folder-create{% endblock %}
+
+{% load bootstrap4 %}
+
+{% block head_title %}Create folder{% if parent %} in {{ parent.name }}{% endif %}{% endblock %}
+
+{% block body %}
+<div class="pinax-documents-folder-create-container">
+    <h2>Create folder{% if parent %} in {{ parent.name }}{% endif %}</h2>
+
+    {% include "pinax/documents/_breadcrumbs.html" with member=parent %}
+
+    <form method="POST" action="{% url 'pinax_documents:folder_create' %}">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <div class="form-actions">
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Create</button>
+            {% endbuttons %}
+        </div>
+    </form>
+</div>
+{% endblock %}
