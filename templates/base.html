@@ -6,11 +6,23 @@
         <meta charset="utf-8" />
         <title>{% block head_title_base %}{% if SITE_NAME %}{{ SITE_NAME }} | {% endif %}{% block head_title %}{% endblock %}{% endblock %}</title>
         {% block viewport %}
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+            <meta name="format-detection" content="telephone=no">
+            <meta name="apple-mobile-web-app-title"content="FileStore">
+
+            <meta name="HandheldFriendly" content="true" />
+            <meta name="MobileOptimized" content="width" />
         {% endblock %}
 
+        {# Load CSS and JavaScript #}
+        {% bootstrap_css %}
+        {% bootstrap_javascript jquery='full' %}
+
         {% block styles %}
-            <link rel="stylsheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+            <link rel="stylesheet" href="{% static 'css/theme.css' %}">
         {% endblock %}
 
         {% block html5shim %}
@@ -21,56 +33,46 @@
         {% endblock %}
 
         {% block extra_head_base %}
-            <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+            <script defer src="https://use.fontawesome.com/releases/v5.10.1/js/all.js"></script>
             {% block extra_head %}{% endblock %}
         {% endblock %}
-        {# Load CSS and JavaScript #}
-        {% bootstrap_css %}
-        {% bootstrap_javascript jquery='full' %}
     </head>
     <body class="{% block body_class_base %}{% block body_class %}{% endblock %}{% endblock %}" id="{% block body_id %}{% endblock %}" {% block body_extra_attributes %}{% endblock %}>
         {% block topbar_base %}
-            <header class="navbar navbar-expand-lg navbar-light bg-light">
-                <nav class="container">
-                    <div class="topbar-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 sidebar1">
                     {% block topbar %}
-                        {% block site_brand %}<a href="/">{{ SITE_NAME }}</a>{% endblock %}
-                        <button class="navbar-toggler expand" type="button" data-toggle="collapse" data-target=".nav-container" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fas fa-bars"></i>
-                        </button>
-
-                        <div class="nav-container" id="navbar">
+                        <div class="logo">
+                        {% block site_brand %}<img src="https://as1.ftcdn.net/jpg/01/05/39/50/500_F_105395009_WDbcTytGvaHckxLi3pLPCa8aVoZlURoq.jpg" class="img-responsive center-block" alt="{{ SITE_NAME }}" width="110px" heigth="50px">{% endblock %}
+                        </div><br>
+                        <div class="left-navigation">
                             {% block nav %}{% include "_nav.html" %}{% endblock %}
                             {% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
-                        </div>
+                    </div>
                     {% endblock %}
                     </div>
-                </nav>
-            </header>
-        {% endblock %}
+                    {% block body_base %}
+                    <div class="col-md-10 col-sm-8 main-content">
+                        {% block content_left %}{% endblock %}
+                            {% block messages %}{% include "_messages.html" %}{% endblock %}
+                            {% block body %}{% endblock %}
 
-        {% block body_base %}
-        <main>
-            {% block content_left %}{% endblock %}
-            <section id="content-section">
-                <div id="content-body">
-                    {% block messages %}{% include "_messages.html" %}{% endblock %}
-                    {% block body %}{% endblock %}
-                </div>
-            </section>
-            {% block content_right %}{% endblock %}
-        </main>
+                        {% block content_right %}{% endblock %}
+                    {% endblock %}
+                    </div>
         {% endblock %}
+        </div>
 
-        {% block footer_base %}
-            <footer>
-                <div>
-                    {% block footer %}{% endblock %}
-                </div>
-            </footer>
+        {% block scripts %}
+            <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+            <script src="{% static 'js/theme.js' %}"></script>
+            <script>
+                $(document).ready( function () {
+                    $('#myTable').DataTable();
+                } );
+            </script>
         {% endblock %}
-
-        {% block scripts %}{% endblock %}
 
         {% block extra_body_base %}
             {% block extra_body %}{% endblock %}

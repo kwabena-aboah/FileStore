@@ -1,13 +1,13 @@
 {% extends "pinax/documents/base.html" %}
 
-{% block body_class %}{{ block.super }} pinax-documents-folder-create{% endblock %}
+{% block body_class %}{{ block.super }} filestore-folder-create{% endblock %}
 
 {% load bootstrap4 %}
 
 {% block head_title %}Create folder{% if parent %} in {{ parent.name }}{% endif %}{% endblock %}
 
 {% block body %}
-<div class="pinax-documents-folder-create-container">
+<div class="filestore-folder-create-container">
     <h2>Create folder{% if parent %} in {{ parent.name }}{% endif %}</h2>
 
     {% include "pinax/documents/_breadcrumbs.html" with member=parent %}
@@ -17,7 +17,7 @@
         {% bootstrap_form form %}
         <div class="form-actions">
             {% buttons %}
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Create</button>
             {% endbuttons %}
         </div>
     </form>

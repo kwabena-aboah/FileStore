@@ -1,9 +1,10 @@
-<ul class="navbar-nav ml-auto main-bar">
+{% load bootstrap4 %}
+<ul class="list">
     {% comment %}
     <li><a href="#">One</a></li>
     <li><a href="#">Two</a></li>
     {% endcomment %}
-    <li class="nav-item"><a href="{% url 'pinax_documents:document_index' %}">Home</a></li>
-    <li class="nav-item"><a href="{% url 'pinax_documents:document_create' %}">Upload Document</a></li>
+    <li class="nav-item" style="background: #004085;"><a href="/">Home</a></li>
+    <li class="nav-item"><a href="{% url 'pinax_documents:document_create' %}">Upload File</a></li>
     <li class="nav-item"><a href="{% url 'pinax_documents:folder_create' %}">Create Folder</a></li>
 </ul>

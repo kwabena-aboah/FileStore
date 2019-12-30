@@ -1,6 +1,6 @@
 {% extends "pinax/documents/base.html" %}
 
-{% block body_class %}{{ block.super }} pinax-documents-folder-share{% endblock %}
+{% block body_class %}{{ block.super }} filestore-folder-share{% endblock %}
 
 {% load bootstrap4 %}
 {% load pinax_documents_tags %}
@@ -17,19 +17,19 @@
         {% csrf_token %}
         {% bootstrap_form form %}
         <div class="form-actions">
-            <a class="cancel btn btn-danger" href="#">Cancel</a>
+            <a class="btn btn-lg btn-default btn-block btn-login text-uppercase font-weight-bold mb-2" href="#">Cancel</a>
             {% buttons %}
-                <button type="submit" class="btn btn-primary">Share</button>
+                <button type="submit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Share</button>
             {% endbuttons %}
         </div>
     </form>
 
     <h3>Shared with</h3>
-    <form method="POST" action="" class="remove-participants">
+    <form method="POST" action="" class="form">
         {% csrf_token %}
         <ul>
             {% for participant in participants %}
-                <li>{% user_display participant %} <button name="remove" value="{{ participant.pk }}">remove</button></li>
+                <li>{% user_display participant %} <button name="submit" value="{{ participant.pk }}" class="btn btn-lg btn-danger btn-block btn-login text-uppercase font-weight-bold mb-2">remove</button></li>
             {% endfor %}
         </ul>
     </form>

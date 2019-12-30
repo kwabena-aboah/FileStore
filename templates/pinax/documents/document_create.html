@@ -1,13 +1,13 @@
 {% extends "pinax/documents/base.html" %}
 
-{% block body_class %}{{ block.super }} pinax-documents-document-create{% endblock %}
+{% block body_class %}{{ block.super }} filestore-document-create{% endblock %}
 
 {% load bootstrap4 %}
 
 {% block head_title %}Upload file{% if folder %} in {{ folder.name }}{% endif %}{% endblock %}
 
 {% block body %}
-<div class="pinax-documents-document-create-container">
+<div class="filestore-document-create-container">
     <h2>
         Upload file{% if folder %} in {{ folder.name }}{% endif %}
     </h2>
@@ -20,13 +20,10 @@
             {{ hidden_field.errors }}
             {{ hidden_field }}
         {% endfor %}
-        <label class="custom-file">
-            Choose file...<input type="file" id="id_file" name="file" class="custom-file-input">
-            <span class="custom-file-control" data-file="Choose file..."></span>
-        </label>
+        {% bootstrap_form form %}
         <div class="form-actions">
             {% buttons %}
-                <button type="submit" class="btn btn-success">Upload</button>
+                <button type="submit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Upload</button>
             {% endbuttons %}
         </div>
     </form>

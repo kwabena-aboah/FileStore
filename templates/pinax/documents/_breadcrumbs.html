@@ -1,5 +1,5 @@
 <nav aria-label="breadcrumb" role="navigation">
-    <ol class="breadcrumb">
+    <ul class="breadcrumb">
         <li class="breadcrumb-item">
             <a href="{% url 'pinax_documents:document_index' %}">Root</a>
         </li>
@@ -11,5 +11,5 @@
             {% endfor %}
         {% endif %}
         <li class="breadcrumb-item active">{{ member.name }}</li>
-    </ol>
+    </ul>
 </nav>
