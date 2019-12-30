@@ -5,6 +5,7 @@
 {% block head_title %}{{ document.name }}{% endblock %}
 
 {% block body %}
+{% include 'subnav_base.html'%}
 <div class="filestores-document-detail-container">
     {% include "pinax/documents/_breadcrumbs.html" with member=document %}
     <a class="btn btn-primary" href="{{ document.download_url }}"><i class="fas fa-download"></i> Download</a>

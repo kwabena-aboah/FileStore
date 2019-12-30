@@ -8,6 +8,7 @@
 
 {% block body %}
 <div class="filestore-folder-create-container">
+    {% include 'subnav_base.html'%}
     <h2>Create folder{% if parent %} in {{ parent.name }}{% endif %}</h2>
 
     {% include "pinax/documents/_breadcrumbs.html" with member=parent %}

@@ -9,8 +9,7 @@
 
 {% block body %}
 <div class="pinax-documents-folder-share-container">
-    <h2>Share folder</h2>
-
+    {% include 'subnav_base.html'%}
     {% include "pinax/documents/_breadcrumbs.html" with member=folder %}
 
     <form method="POST" action="{% url 'pinax_documents:folder_share' folder.id %}">

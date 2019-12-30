@@ -5,6 +5,7 @@
 {% block head_title %}{{ folder.name }}{% endblock %}
 
 {% block body %}
+{% include 'subnav_base.html'%}
 <div class="pinax-documents-folder-detail-container">
     {% include "pinax/documents/_breadcrumbs.html" with member=folder %}
     {% include "pinax/documents/_member_table.html" %}
