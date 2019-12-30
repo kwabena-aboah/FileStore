@@ -31,6 +31,11 @@ clone the repo from github and install
 5. to create admin user use the command 'python manage.py createsuperuser'
 6. start the application using the command 'python manage.py runserver'
 
+============
+Todo
+============
+1. Add Plagiarism Checker to scan files uploaded to the platform
+
 
 License
 -------
