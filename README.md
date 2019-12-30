@@ -1,23 +1,23 @@
 # FileStore
 Projects and document system using pinax document and django-user-accounts from pinax
 
-Home Page
-.. image:: https://github.com/kwabena-aboah/FileStore/blob/master/static/img/home.png
+Home Page Image
+https://github.com/kwabena-aboah/FileStore/blob/master/static/img/home.png
 
-Create Folder
-.. image:: https://github.com/kwabena-aboah/FileStore/blob/master/static/img/create_folder.png
+Create Folder image
+https://github.com/kwabena-aboah/FileStore/blob/master/static/img/create_folder.png
 
-Upload File
-.. image:: https://github.com/kwabena-aboah/FileStore/blob/master/static/img/upload.png
+Upload File Image
+https://github.com/kwabena-aboah/FileStore/blob/master/static/img/upload.png
 
-User Menu
-.. image:: https://github.com/kwabena-aboah/FileStore/blob/master/static/img/user_menu.png
+User Menu Image
+https://github.com/kwabena-aboah/FileStore/blob/master/static/img/user_menu.png
 
-Account Settings
-.. image:: https://github.com/kwabena-aboah/FileStore/blob/master/static/img/account_settings.png
+Account Settings Image
+https://github.com/kwabena-aboah/FileStore/blob/master/static/img/account_settings.png
 
-Account Password
-.. image:: https://github.com/kwabena-aboah/FileStore/blob/master/static/img/account_password.png
+Account Password Image
+https://github.com/kwabena-aboah/FileStore/blob/master/static/img/account_password.png
 
 
 ============
