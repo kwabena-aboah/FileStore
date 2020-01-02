@@ -27,7 +27,17 @@ clone the repo from github and install
 1. git clone https://github.com/kwabena-aboah/FileStore.git
 2. cd /directory/of/app
 3. pip install -r requirements.txt
-4. run migrations using 'python manage.py runserver' command
+4. go to your settings.py and configure your email settings:
+
+  EMAIL_HOST = 'smtp.gmail.com'
+  EMAIL_HOST_USER = '' # your email address here
+  EMAIL_HOST_PASSWORD = r'' # your password goes here
+  EMAIL_PORT = 587
+  EMAIL_USE_TLS = True
+  EMAIL_USE_SSL = False
+  DEFAULT_FROM_EMAIL = 'Admin<admin@127.0.0.1:8000>'
+  
+4. run migrations using 'python manage.py migrate' command
 5. to create admin user use the command 'python manage.py createsuperuser'
 6. start the application using the command 'python manage.py runserver'
 
