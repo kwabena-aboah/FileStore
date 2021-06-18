@@ -99,7 +99,7 @@ httplib2==0.18.0
 hyperframe==5.2.0
 icalendar==4.0.3
 idna==2.8
-impacket==0.9.20
+impacket==0.9.23
 IPy==0.83
 ipykernel==4.10.1
 ipython==5.8.0
