@@ -102,7 +102,7 @@ idna==2.8
 impacket==0.9.23
 IPy==0.83
 ipykernel==4.10.1
-ipython==5.8.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 ipywidgets==6.0.0
 isort==4.3.16
