@@ -165,7 +165,7 @@ opencv-python==4.2.0.32
 openpyxl==2.6.1
 packaging==19.1
 pandocfilters==1.4.2
-paramiko==2.6.0
+paramiko==2.10.1
 parsero==0.82
 passlib==1.7.1
 patator==0.7
