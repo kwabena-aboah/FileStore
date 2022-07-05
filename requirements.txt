@@ -188,7 +188,7 @@ psycopg2-binary==2.8.4
 pyaes==1.6.1
 pyasn1==0.4.2
 pycairo==1.16.2
-pycares==2.1.1
+pycares==4.2.0
 pycountry==19.8.18
 pycparser==2.19
 pycrypto==2.6.1
