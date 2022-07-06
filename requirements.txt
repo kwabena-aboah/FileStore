@@ -130,7 +130,7 @@ ldap3==2.5.1
 ldapdomaindump==0.9.1
 LibAppArmor==2.13.3
 logutils==0.3.3
-lxml==4.6.5
+lxml==4.9.1
 lz4==2.1.10+dfsg
 Mako==1.0.7
 Markdown==2.6.9
