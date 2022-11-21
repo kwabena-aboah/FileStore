@@ -270,7 +270,7 @@ sslyze==2.1.4
 stem==1.7.1
 tabulate==0.8.2
 tensorboard==1.14.0
-tensorflow==2.5.3
+tensorflow==2.9.3
 tensorflow-estimator==1.14.0
 termcolor==1.1.0
 terminado==0.8.2
