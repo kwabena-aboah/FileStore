@@ -296,7 +296,7 @@ wapiti3==3.0.2
 wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.53.0
-Werkzeug==0.16.0
+Werkzeug==2.2.3
 wfuzz==2.4
 whitenoise==4.1.2
 widgetsnbextension==2.0.0
